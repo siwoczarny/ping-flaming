@@ -1,0 +1,32 @@
+@import '../variables.scss';
+
+.modal-header {
+    background-color: $color-bg-secondary;
+    color: $color-text-main;
+}
+
+.modal-title h4 {
+    text-align: center;
+}
+
+button.btn {
+    border: none;
+    &-primary {
+        background-color: $color-element-disabled;
+        color: $color-text-main;
+        &:hover {
+            background-color: $color-element-disabled;
+            color: $color-text-main;
+            cursor: not-allowed;
+        }
+    }
+
+    &-secondary {
+        background: transparent;
+        color: $color-text-secondary;
+        &:hover {
+            background: initial;
+            color: $color-text-focus;
+        }
+    }
+}

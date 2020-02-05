@@ -1,7 +1,8 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { Button } from 'react-bootstrap';
-// import { Button } from 'react-bootstrap';
+import '../styles/components/TaskModal.scss';
+import AddTask from './AddTask';
 
 const TaskModal = (props) => {
 
@@ -10,17 +11,25 @@ const TaskModal = (props) => {
 
     return (
         <>
-        <Modal show={showModal} onHide={hideModal}>
+        <Modal
+            show={showModal}
+            onHide={hideModal}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            >
             <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Dodaj nowe zadanie</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>
+                <AddTask />
+            </Modal.Body>
             <Modal.Footer>
             <Button variant="secondary" onClick={hideModal}>
-                Close
+                Anuluj
             </Button>
             <Button variant="primary" onClick={hideModal}>
-                Save Changes
+                Zatwierdź zmiany
             </Button>
             </Modal.Footer>
         </Modal>

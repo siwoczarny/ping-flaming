@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import '../styles/components/OpenTaskModal.scss';
+import '../styles/layouts/TaskModalButton.scss';
 import plus from '../images/sign/simple.png';
-import TaskModal from './TaskModal';
+import TaskModal from '../components/TaskModal';
 
-class OpenTaskModal extends Component {
+class TaskModalButton extends Component {
     state = {
-        show: false,
         setShow: false,
     }
 
@@ -15,16 +14,19 @@ class OpenTaskModal extends Component {
         this.setState({
             setShow : !visibility
         })
-        console.log(this.state.setShow)
     }
 
     handleHide = () => {
         this.setState({setShow : false})
     }
 
+    // handleSaveValues = () = {
+    //     this.setState({setShow : false}),
+    //     //here a function that will takes values and provide this data to the addTask component
+    // }
+
     render() { 
         const show = this.state.setShow;
-        
         return (
             <>
                 <TaskModal open={this.state.setShow} hide={this.handleHide}/>
@@ -34,4 +36,4 @@ class OpenTaskModal extends Component {
     }
 }
  
-export default OpenTaskModal;
+export default TaskModalButton;
