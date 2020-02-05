@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './styles/App.scss';
 //layouts
 import Header from './layouts/Header';
-import ButtonAddTask from './components/ButtonAddTask';
+import OpenTaskModal from './components/OpenTaskModal';
 
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
       <Router basename={process.env.PUBLIC_URL}>
         <div className="app">
           <Header />
-          <ButtonAddTask />
+          <OpenTaskModal />
         </div>
       </Router>
       

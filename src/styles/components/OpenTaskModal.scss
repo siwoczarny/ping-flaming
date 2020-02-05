@@ -1,6 +1,6 @@
 @import '../variables.scss';
 
-button {
+.btn-link {
     position: absolute;
     bottom: 24px;
     right: 48px;
@@ -15,5 +15,11 @@ button {
     width: 40px;
     height: 40px;
     object-fit: contain;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background-color: $color-element-hover;
     }
 }
