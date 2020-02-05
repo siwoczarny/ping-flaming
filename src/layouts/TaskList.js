@@ -1,20 +1,21 @@
 import React from 'react';
+// import Task from '../components/Task'
 import '../styles/layouts/TaskList.scss';
 
 const TaskList = () => {
     return (
         <div className="list">
-            <div>
-                <h5>Do zrobienia</h5>
+            <div className="list_column">               
+                <h5 className="list_status">Do zrobienia</h5>
             </div>
-            <div>
-                <h5>W trakcie</h5>
+            <div className="list_column">               
+                <h5 className="list_status">W trakcie</h5>
             </div>
-            <div>
-                <h5>Zrobione</h5>
+            <div className="list_column">               
+                <h5 className="list_status">Zrobione</h5>
             </div>
-            <div>
-                <h5>Anulowane</h5>
+            <div className="list_column">               
+                <h5 className="list_status">Anulowane</h5>
             </div>
         </div>
     );

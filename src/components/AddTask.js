@@ -14,8 +14,7 @@ class AddTask extends Component {
                 <select defaultValue={"default"} name="status">
                     <option value="default" disabled>Wybierz status zadania</option>
                     <option value="to-do">Do zrobienia</option>
-                    <option value="in-progress">Do zrobienia</option>
-                    <option value="done">Gotowe</option>
+                    <option value="in-progress">W trakcie</option>
                 </select>
             </form>
         );

@@ -1,1 +1,26 @@
 @import '../variables.scss';
+
+.list {
+    display: flex;
+    flex-grow: 1;
+    margin: 216px 48px 0;
+    justify-content: space-around;
+    &_column {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+            border-right: 1px dashed $color-bg-primary;
+        }
+    }
+
+    &_status {
+        width: auto;
+        height: 56px;
+        border-radius: 8px;
+        margin: 8px;
+        background-color: $color-bg-primary;
+        font-size: 1.125rem;
+        padding: 16px;
+    }
+}
