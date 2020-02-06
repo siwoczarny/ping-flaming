@@ -1,10 +1,18 @@
 import React from 'react';
+import '../styles/components/Task.scss';
 
-const Task = () => {
+const Task = (props) => {
+
+    const { text, description } = props.task;
+    console.log(text, description);
+    
+    
     return (
         <div className="task">
-            <title>Tytuł tasku</title>
-            <p>Opis tasku</p>
+            <p>
+                <strong>{text}</strong><br />
+                {description}
+            </p>
             <button>Usuń</button>
             <button>Edytuj</button>
         </div>
