@@ -15,36 +15,37 @@ class App extends Component {
           id: 0,
           text: "tytuł zadania 1",
           description: "ops zadania 1",
-          active: false,
+          list: "todo",
       },
       {
           id: 1,
           text: "tytuł zadania 2",
           description: "ops zadania 2",
-          active: true,
+          list: "progress",
       },
       {
           id: 2,
           text: "tytuł zadania 3",
           description: "ops zadania 3",
-          active: true,
+          list: "progress",
       },
       {
           id: 3,
           text: "tytuł zadania 4",
           description: "ops zadania 4",
-          active: false,
+          list: "todo",
       },
     ],
   }
 
   counter = 4
 
-  addTask = (text, description) => {
+  addTask = (text, description, list) => {
     const task = {
-      id: this.cunter,
+      id: this.counter,
       text,
       description,
+      list,
     }
     this.counter++
     this.setState(prevState => ({
@@ -54,7 +55,6 @@ class App extends Component {
 
   render() { 
     return (
-      
       <Router basename={process.env.PUBLIC_URL}>
         <div className="app">
           <Header />
@@ -62,7 +62,6 @@ class App extends Component {
           <TaskModal add={this.addTask}/>
         </div>
       </Router>
-      
      );
   }
 }

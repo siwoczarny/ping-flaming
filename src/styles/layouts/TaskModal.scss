@@ -23,7 +23,7 @@ button.btn {
             cursor: not-allowed;
         }
         &:hover {
-            background-color: $color-element-hover;
+            background-color: $color-element-active;
             color: $color-element-focus;
             cursor: pointer;
         }

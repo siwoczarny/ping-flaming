@@ -1,18 +1,30 @@
 import React from 'react';
 import '../styles/components/Task.scss';
+import editIcon from '../icons/edit/edit.png';
+import deleteIcon from '../icons/delete/delete.png';
 
 const Task = (props) => {
 
     const { text, description } = props.task;    
     
     return (
-        <div className="task">
+        <div className="task" key={props.task.key}>
+            <h6>{text}</h6>
             <p>
-                <strong>{text}</strong><br />
+                <span>Opis</span><br/>
                 {description}
             </p>
-            <button>Usuń</button>
-            <button>Edytuj</button>
+            <div className="task_buttons">
+                <button>
+                    <img src={deleteIcon} alt="icon"></img>
+                    <p>Usuń</p>
+                </button>
+                <button>
+                    <img src={editIcon} alt="icon"></img>
+                    <p>Edytuj</p>
+                </button>
+            </div>
+            
         </div>
     );
 }

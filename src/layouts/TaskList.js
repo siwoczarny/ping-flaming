@@ -4,8 +4,8 @@ import '../styles/layouts/TaskList.scss';
 
 const TaskList = (props) => {
     
-    const toDo = props.tasks.filter(task => !task.active);
-    const progress = props.tasks.filter(task => task.active);
+    const toDo = props.tasks.filter(task => task.list === "todo");
+    const progress = props.tasks.filter(task => task.list === "progress");
     
     const toDoList = toDo.map(task => <Task key={task.id} task={task} /> );
     const progressList = progress.map(task => <Task key={task.id} task={task} /> );

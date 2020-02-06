@@ -9,6 +9,7 @@ class TaskModal extends Component {
         setShow: false,
         text: '',
         description: '',
+        list: '',
     }
 
     handleShow = () => {
@@ -24,7 +25,7 @@ class TaskModal extends Component {
 
     handleText = (e) => {
         this.setState({
-            text: e.target.value,
+            text: e.target.value
         }) 
     }
 
@@ -35,18 +36,26 @@ class TaskModal extends Component {
         })
     }
 
-    handleClick = () => {
-        const { text, description } = this.state;
-        const add = this.props.add(text, description);
-        if(add) {
-            this.setState({
-                text: '',
-                description: '',
-            })
-        }
+    handleSelect = (e) => {
         this.setState({
-            setShow: false
+            active: e.target.value
         })
+        console.log(e.target.value);
+        
+    }
+
+    handleClick = () => {
+        const { text, description, active } = this.state;
+        const add = this.props.add(text, description, active);
+        
+            if(add || text.length >=1) {
+                this.setState({
+                    setShow: false,
+                    text: '',
+                    description: '',
+                    list: '',
+                })
+            }
     }
 
     render() { 
@@ -70,10 +79,10 @@ class TaskModal extends Component {
                         <label htmlFor="text">Opis</label><br />
                         <textarea type="text" placeholder="Opisz zadanie, stwórz kryteria akceptacji zadania lub dodaj niezbędne informacje o tym zadaniu..." value={this.state.description} onChange={this.handleDescription} /><br/>
                         <label htmlFor="select">Status</label><br/>
-                        <select defaultValue={"default"} name="status">
+                        <select defaultValue={"default"} name="status" onChange={this.handleSelect}>
                             <option value="default" disabled>Wybierz status zadania</option>
-                            <option value="to-do">Do zrobienia</option>
-                            <option value="in-progress">W trakcie</option>
+                            <option value="todo">Do zrobienia</option>
+                            <option value="progress">W trakcie</option>
                         </select>
                     </form>
                 </Modal.Body>
