@@ -3,18 +3,24 @@ import Task from '../components/Task'
 import '../styles/layouts/TaskList.scss';
 
 const TaskList = (props) => {
-
-    const tasks = props.tasks;
-    const taskList = tasks.map(task => <Task key={task.id} task={task} /> );
+    
+    const toDo = props.tasks.filter(task => !task.active);
+    const progress = props.tasks.filter(task => task.active);
+    
+    const toDoList = toDo.map(task => <Task key={task.id} task={task} /> );
+    const progressList = progress.map(task => <Task key={task.id} task={task} /> );
+    
+    // const taskList = tasks.map(task => <Task key={task.id} task={task} /> );
 
     return (
         <div className="list">
             <div className="list_column">               
                 <h5 className="list_status">Do zrobienia</h5>
+                {toDoList}
             </div>
             <div className="list_column">               
                 <h5 className="list_status">W trakcie</h5>
-                {taskList}
+                {progressList}
             </div>
             <div className="list_column">               
                 <h5 className="list_status">Zrobione</h5>

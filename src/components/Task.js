@@ -3,9 +3,7 @@ import '../styles/components/Task.scss';
 
 const Task = (props) => {
 
-    const { text, description } = props.task;
-    console.log(text, description);
-    
+    const { text, description } = props.task;    
     
     return (
         <div className="task">

@@ -24,9 +24,10 @@ class TaskModal extends Component {
 
     handleText = (e) => {
         this.setState({
-            text: e.target.value
-        })
+            text: e.target.value,
+        }) 
     }
+
 
     handleDescription = (e) => {
         this.setState({
@@ -34,6 +35,19 @@ class TaskModal extends Component {
         })
     }
 
+    handleClick = () => {
+        const { text, description } = this.state;
+        const add = this.props.add(text, description);
+        if(add) {
+            this.setState({
+                text: '',
+                description: '',
+            })
+        }
+        this.setState({
+            setShow: false
+        })
+    }
 
     render() { 
         const show = this.state.setShow;
@@ -52,9 +66,9 @@ class TaskModal extends Component {
                 <Modal.Body>
                     <form className="form">
                         <label htmlFor="text">Tytuł</label><br/>
-                        <input type="text" placeholder="Wpisz tytuł swojego zadania..." value={"this.state.text"} onChange={this.handleText} /><br/>
+                        <input type="text" placeholder="Wpisz tytuł swojego zadania..." value={this.state.text} onChange={this.handleText} /><br/>
                         <label htmlFor="text">Opis</label><br />
-                        <textarea type="text" placeholder="Opisz zadanie, stwórz kryteria akceptacji zadania lub dodaj niezbędne informacje o tym zadaniu..." value={"this.state.description"} onChange={this.handleDescription} /><br/>
+                        <textarea type="text" placeholder="Opisz zadanie, stwórz kryteria akceptacji zadania lub dodaj niezbędne informacje o tym zadaniu..." value={this.state.description} onChange={this.handleDescription} /><br/>
                         <label htmlFor="select">Status</label><br/>
                         <select defaultValue={"default"} name="status">
                             <option value="default" disabled>Wybierz status zadania</option>
@@ -67,7 +81,7 @@ class TaskModal extends Component {
                 <Button variant="secondary" onClick={this.handleHide}>
                     Anuluj
                 </Button>
-                <Button variant="primary" onClick={this.handleHide}>
+                <Button variant="primary" disabled={!this.state.text} onClick={this.handleClick}>
                     Zatwierdź zmiany
                 </Button>
                 </Modal.Footer>

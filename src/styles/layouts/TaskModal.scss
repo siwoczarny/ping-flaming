@@ -12,15 +12,22 @@
 button.btn {
     border: none;
     &-primary {
-        background-color: $color-element-disabled;
         color: $color-text-main;
-        &:hover {
+        background-color: $color-element-focus;
+        &:disabled {
+            background-color: $color-element-disabled;
+        }
+        &:disabled:hover {
             background-color: $color-element-disabled;
             color: $color-text-main;
             cursor: not-allowed;
         }
+        &:hover {
+            background-color: $color-element-hover;
+            color: $color-element-focus;
+            cursor: pointer;
+        }
     }
-
     &-secondary {
         background: transparent;
         color: $color-text-secondary;

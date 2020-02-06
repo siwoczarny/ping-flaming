@@ -15,28 +15,43 @@ class App extends Component {
           id: 0,
           text: "tytuł zadania 1",
           description: "ops zadania 1",
-          status: '',
+          active: false,
       },
       {
           id: 1,
           text: "tytuł zadania 2",
           description: "ops zadania 2",
-          status: '',
+          active: true,
       },
       {
           id: 2,
           text: "tytuł zadania 3",
           description: "ops zadania 3",
-          status: '',
+          active: true,
       },
       {
           id: 3,
           text: "tytuł zadania 4",
           description: "ops zadania 4",
-          status: '',
+          active: false,
       },
-  ],
+    ],
   }
+
+  counter = 4
+
+  addTask = (text, description) => {
+    const task = {
+      id: this.cunter,
+      text,
+      description,
+    }
+    this.counter++
+    this.setState(prevState => ({
+      tasks: [...prevState.tasks, task]
+    }))
+  }
+
   render() { 
     return (
       
@@ -44,7 +59,7 @@ class App extends Component {
         <div className="app">
           <Header />
           <TaskList tasks={this.state.tasks} />
-          <TaskModal />
+          <TaskModal add={this.addTask}/>
         </div>
       </Router>
       
