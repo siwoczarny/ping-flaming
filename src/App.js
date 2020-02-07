@@ -10,32 +10,7 @@ import TaskList from './layouts/TaskList';
 
 class App extends Component {
   state = {
-    tasks: [
-      {
-          id: 0,
-          text: "tytuł zadania 1",
-          description: "ops zadania 1",
-          list: "todo",
-      },
-      {
-          id: 1,
-          text: "tytuł zadania 2",
-          description: "ops zadania 2",
-          list: "progress",
-      },
-      {
-          id: 2,
-          text: "tytuł zadania 3",
-          description: "ops zadania 3",
-          list: "progress",
-      },
-      {
-          id: 3,
-          text: "tytuł zadania 4",
-          description: "ops zadania 4",
-          list: "todo",
-      },
-    ],
+    tasks: [],
   }
 
   counter = 4
