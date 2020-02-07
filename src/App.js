@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './styles/App.scss';
 //layouts
 import Header from './layouts/Header';
-import TaskModal from './layouts/TaskModal';
+import ModalNewTask from './layouts/ModalNewTask';
 import TaskList from './layouts/TaskList';
 
 
@@ -13,7 +13,7 @@ class App extends Component {
     tasks: [],
   }
 
-  counter = 4
+  counter = 0
 
   addTask = (text, description, list) => {
     const task = {
@@ -28,13 +28,22 @@ class App extends Component {
     }))
   }
 
+  deleteTask = (id) => {
+    const tasks= [...this.state.tasks];
+    const index = tasks.findIndex(task => task.id === id);
+    tasks.splice(index, 1);
+    this.setState({
+      tasks
+    })
+  }
+
   render() { 
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div className="app">
           <Header />
-          <TaskList tasks={this.state.tasks} />
-          <TaskModal add={this.addTask}/>
+          <TaskList tasks={this.state.tasks} delete={this.deleteTask} />
+          <ModalNewTask add={this.addTask}/>
         </div>
       </Router>
      );

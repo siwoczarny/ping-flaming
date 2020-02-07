@@ -7,10 +7,8 @@ const TaskList = (props) => {
     const toDo = props.tasks.filter(task => task.list === "todo");
     const progress = props.tasks.filter(task => task.list === "progress");
     
-    const toDoList = toDo.map(task => <Task key={task.id} task={task} /> );
-    const progressList = progress.map(task => <Task key={task.id} task={task} /> );
-    
-    // const taskList = tasks.map(task => <Task key={task.id} task={task} /> );
+    const toDoList = toDo.map(task => <Task key={task.id} task={task} delete={props.delete} /> );
+    const progressList = progress.map(task => <Task key={task.id} task={task} delete={props.delete} /> );
 
     return (
         <div className="list">

@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import '../styles/layouts/TaskModal.scss';
 import plus from '../images/sign/simple.png';
 
-class TaskModal extends Component {
+class ModalNewTask extends Component {
     state = {
         setShow: false,
         text: '',
@@ -103,4 +103,4 @@ class TaskModal extends Component {
     }
 }
  
-export default TaskModal;
+export default ModalNewTask;

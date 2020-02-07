@@ -5,7 +5,7 @@ import deleteIcon from '../icons/delete/delete.png';
 
 const Task = (props) => {
 
-    const { text, description } = props.task;    
+    const { id, text, description } = props.task;    
     
     return (
         <div className="task" key={props.task.key}>
@@ -15,7 +15,7 @@ const Task = (props) => {
                 {description}
             </p>
             <div className="task_buttons">
-                <button>
+                <button onClick={() => props.delete(id)} >
                     <img src={deleteIcon} alt="icon"></img>
                     <p>Usuń</p>
                 </button>
