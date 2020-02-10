@@ -30,12 +30,13 @@ class App extends Component {
     }
     this.counter++
     this.setState(prevState => ({
-      tasks: [...prevState.tasks, task]
+      tasks: [...prevState.tasks, task],
     }))
+    
   }
 
   deleteTask = (id) => {
-    const tasks= [...this.state.tasks];
+    const tasks = [...this.state.tasks];
     const index = tasks.findIndex(task => task.id === id);
     tasks.splice(index, 1);
     this.setState({
@@ -43,9 +44,7 @@ class App extends Component {
     })
   }
 
-  editTask = (id, list) => {
-    
-    console.log("edycja tasku o id = " + id + " i zmiana listy na: " + list)
+  editTask = (id, list) => {    
     const tasks = [...this.state.tasks];
     tasks.forEach(task => {
     if (task.id === id) {
