@@ -6,7 +6,6 @@ import './styles/App.scss';
 import Header from './layouts/Header';
 import ModalNewTask from './layouts/ModalNewTask';
 import TaskList from './layouts/TaskList';
-// import ModalEditTask from './components/ModalEditTask';
 
 class App extends Component {
   state = {
@@ -44,27 +43,13 @@ class App extends Component {
     })
   }
 
-  editTask = (id) => {
-    // this.setState({
-    //   showEdit: true
-    // })
-    console.log("edycja tasku na zmianę listy o id = " + id)
+  editTask = (id, list) => {
+    
+    console.log("edycja tasku na zmianę listy o id = " + id + " na listę " + list)
     const tasks = [...this.state.tasks];
     tasks.forEach(task => {
     if (task.id === id) {
-      // switch (task.list) {
-      //   case 'to-do':
-      //     task.list = "in-progress";
-      //     break;
-      //   case 'in-progress':
-      //     task.list = "done";
-      //     break;
-      //   case 'done':
-      //     task.list = "canceled";
-      //     break;
-      //   default:
-      //     break;
-      // }
+      task.list = list
       }
     })
     this.setState({
@@ -73,14 +58,12 @@ class App extends Component {
   }
 
   render() { 
-    // const showEdit = this.state.showEdit;
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div className="app">
           <Header />
           <TaskList tasks={this.state.tasks} delete={this.deleteTask} edit={this.editTask}/>
           <ModalNewTask add={this.addTask}/>
-          {/* {showEdit ? <ModalEditTask /> : null }  */}
         </div>
       </Router>
      );

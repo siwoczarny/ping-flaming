@@ -11,15 +11,14 @@ const Task = (props) => {
 
     const { key, id, text, description } = props.task;
     const [open, setOpen] = React.useState(false);
-    // const list = props.editList;
+    let list = null;
 
     function handleSelect(e) {
-        console.log(e.target.value);
-        
+        list = e.target.value;        
     }
 
     function handleSave() {
-        props.edit(id);
+        props.edit(id, list);
         setOpen(false);
     }
     
@@ -43,26 +42,28 @@ const Task = (props) => {
             {open ? 
                     <Modal.Dialog>
                         <Modal.Header className="text-center">
-                        <Modal.Title>Edytuj zadanie</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                    <form className="form">
-                        <label htmlFor="select">Status<span>*</span></label><br/>
-                        <select defaultValue={"default"} className="form-control" name="status" onChange={handleSelect}>
-                            <option value="default" disabled>Zmień status zadania</option>
-                            <option value="to-do">Do zrobienia</option>
-                            <option value="in-progress">W trakcie</option>
-                        </select>
-                    </form>
-                </Modal.Body>
-                    <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setOpen(false)}>
-                        Anuluj
-                    </Button>
-                    <Button variant="primary" onClick={handleSave} >
-                        Zapisz
-                    </Button>
-                    </Modal.Footer>
+                            <Modal.Title>Edytuj zadanie</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                        <form className="form">
+                            <label htmlFor="select">Status<span>*</span></label><br/>
+                            <select defaultValue={"default"} className="form-control" name="status" onChange={handleSelect}>
+                                <option value="default" disabled>Zmień status zadania</option>
+                                <option value="to-do">Do zrobienia</option>
+                                <option value="in-progress">W trakcie</option>
+                                <option value="done">Zrobione</option>
+                                <option value="canceled">Anulowane</option>
+                            </select>
+                        </form>
+                        </Modal.Body>
+                        <Modal.Footer>
+                        <Button variant="secondary" onClick={() => setOpen(false)}>
+                            Anuluj
+                        </Button>
+                        <Button variant="primary" onClick={handleSave} >
+                            Zapisz
+                        </Button>
+                        </Modal.Footer>
                     </Modal.Dialog> 
             : null}
         </div>
