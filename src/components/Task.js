@@ -18,8 +18,12 @@ const Task = (props) => {
     }
 
     function handleSave() {
+        if(list) {
         props.edit(id, list);
         setOpen(false);
+        } else {
+            alert('Ustaw status zadania');
+        }
     }
     
     return (

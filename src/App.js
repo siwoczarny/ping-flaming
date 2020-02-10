@@ -45,7 +45,7 @@ class App extends Component {
 
   editTask = (id, list) => {
     
-    console.log("edycja tasku na zmianę listy o id = " + id + " na listę " + list)
+    console.log("edycja tasku o id = " + id + " i zmiana listy na: " + list)
     const tasks = [...this.state.tasks];
     tasks.forEach(task => {
     if (task.id === id) {
