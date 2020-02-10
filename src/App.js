@@ -14,7 +14,8 @@ class App extends Component {
         id: 0,
         text: "Tytuł",
         description: "Opis",
-        list: "to-do"
+        list: "to-do",
+        active: false,
       }
     ],
   }
@@ -27,6 +28,7 @@ class App extends Component {
       text,
       description,
       list,
+      active: false,
     }
     this.counter++
     this.setState(prevState => ({
@@ -56,11 +58,25 @@ class App extends Component {
     })
   }
 
+  findTask = (findText) => {
+    const tasks = [...this.state.tasks];
+    tasks.forEach(task => {
+      if(task.text === findText) {
+        task.active = true ;
+      } else {
+        alert('Nie znaleziono zadania o podanej nazwie')
+      }
+    })
+    this.setState({
+      tasks
+    })
+  }
+
   render() { 
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div className="app">
-          <Header />
+          <Header search={this.findTask}/>
           <TaskList tasks={this.state.tasks} delete={this.deleteTask} edit={this.editTask}/>
           <ModalNewTask add={this.addTask}/>
         </div>

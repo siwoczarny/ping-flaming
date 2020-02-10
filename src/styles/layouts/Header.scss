@@ -27,6 +27,16 @@
             width: 305px;
             margin-left: 48px;
         }
+        button {
+            background: $color-bg-primary;
+            border: none;
+            padding: 4px;
+            transform: translateX(-110%);
+        }
+        img {
+            width: 24px;
+            height: auto;
+        }
     }
     .user {
         display: flex;

@@ -8,15 +8,27 @@
     font-family: $font-task;
     background-color: $color-bg-primary;
     border-radius: 8px;
-    h6 {
-        font-size: 1rem;
-    }
-    p {
+    &_content {
         margin: 0;
-        font-size: 14px;
-        span {
-            font-size: .75rem;
-            color: $color-text-secondary;
+        padding: 0;
+        h6 {
+            padding: 0 8px;
+            font-size: 1rem;
+            border-radius: 8px;
+            transition: .5s;
+            &.active {
+                padding: 8px 8px;
+                background-color:#914762;
+            }
+        }
+        p {
+            margin: 0;
+            padding: 8px 8px 0;
+            font-size: 14px;
+            span {
+                font-size: .75rem;
+                color: $color-text-secondary;
+            }
         }
     }
     &_buttons {

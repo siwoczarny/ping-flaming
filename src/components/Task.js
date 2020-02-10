@@ -7,7 +7,7 @@ import EditTask from './EditTask';
 
 const Task = (props) => {
 
-    const { key, id, text, description } = props.task;
+    const { key, id, text, description, active } = props.task;
     const [open, setOpen] = React.useState(false);
 
     function handleEdit() {
@@ -20,11 +20,13 @@ const Task = (props) => {
     
     return (
         <div className="task" key={key}>
-            <h6>{text}</h6>
-            <p>
-                <span>Opis</span><br/>
-                {description}
-            </p>
+            <div className="task_content">
+                <h6 className={`${active ? " active" : ""}`}>{text}</h6>
+                <p>
+                    <span>Opis</span><br/>
+                    {description}
+                </p> 
+            </div>
             <div className="task_buttons">
                 <button onClick={() => props.delete(id)} >
                     <img src={deleteIcon} alt="icon"></img>
