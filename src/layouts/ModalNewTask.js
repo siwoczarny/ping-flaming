@@ -61,7 +61,7 @@ class ModalNewTask extends Component {
     }
 
     render() { 
-        const show = this.state.setShow;
+        const toShow = this.state.setShow;
         return (
             <>
             <Modal
@@ -71,7 +71,7 @@ class ModalNewTask extends Component {
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
                 >
-                <Modal.Header className="text-center" closeButton>
+                <Modal.Header closeButton>
                     <Modal.Title>Dodaj nowe zadanie</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -83,8 +83,8 @@ class ModalNewTask extends Component {
                         <label htmlFor="select">Status<span>*</span></label><br/>
                         <select defaultValue={"default"} className="form-control" name="status" onChange={this.handleSelect}>
                             <option value="default" disabled>Wybierz status zadania</option>
-                            <option value="todo">Do zrobienia</option>
-                            <option value="progress">W trakcie</option>
+                            <option value="to-do">Do zrobienia</option>
+                            <option value="in-progress">W trakcie</option>
                         </select>
                     </form>
                 </Modal.Body>
@@ -97,7 +97,7 @@ class ModalNewTask extends Component {
                 </Button>
                 </Modal.Footer>
             </Modal>
-            {show ? null : <Button variant="link" onClick={this.handleShow} ><img src={plus} alt="add task"></img></Button>}
+            {toShow ? null : <Button variant="link" onClick={this.handleShow} ><img src={plus} alt="add task"></img></Button>}
             </>
         );
     }

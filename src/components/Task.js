@@ -2,13 +2,29 @@ import React from 'react';
 import '../styles/components/Task.scss';
 import editIcon from '../icons/edit/edit.png';
 import deleteIcon from '../icons/delete/delete.png';
+import Modal from 'react-bootstrap/Modal';
+import { Button } from 'react-bootstrap';
+// import ModalEditTask from './ModalEditTask';
+
 
 const Task = (props) => {
 
-    const { id, text, description } = props.task;    
+    const { key, id, text, description } = props.task;
+    const [open, setOpen] = React.useState(false);
+    // const list = props.editList;
+
+    function handleSelect(e) {
+        console.log(e.target.value);
+        
+    }
+
+    function handleSave() {
+        props.edit(id);
+        setOpen(false);
+    }
     
     return (
-        <div className="task" key={props.task.key}>
+        <div className="task" key={key}>
             <h6>{text}</h6>
             <p>
                 <span>Opis</span><br/>
@@ -19,12 +35,36 @@ const Task = (props) => {
                     <img src={deleteIcon} alt="icon"></img>
                     <p>Usuń</p>
                 </button>
-                <button>
+                <button onClick={() => setOpen(true)} >
                     <img src={editIcon} alt="icon"></img>
                     <p>Edytuj</p>
                 </button>
             </div>
-            
+            {open ? 
+                    <Modal.Dialog>
+                        <Modal.Header className="text-center">
+                        <Modal.Title>Edytuj zadanie</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                    <form className="form">
+                        <label htmlFor="select">Status<span>*</span></label><br/>
+                        <select defaultValue={"default"} className="form-control" name="status" onChange={handleSelect}>
+                            <option value="default" disabled>Zmień status zadania</option>
+                            <option value="to-do">Do zrobienia</option>
+                            <option value="in-progress">W trakcie</option>
+                        </select>
+                    </form>
+                </Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setOpen(false)}>
+                        Anuluj
+                    </Button>
+                    <Button variant="primary" onClick={handleSave} >
+                        Zapisz
+                    </Button>
+                    </Modal.Footer>
+                    </Modal.Dialog> 
+            : null}
         </div>
     );
 }
