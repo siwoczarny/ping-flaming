@@ -1,9 +1,9 @@
 import React from 'react';
-import searchIcon from '../icons/search/search.png'
+import searchIcon from '../icons/search/search.png';
 
 const SearchField = (props) => {
 
-    let findText = null;
+    let findText = null ;
 
     function handleSearch(e) {
         findText = e.target.value;

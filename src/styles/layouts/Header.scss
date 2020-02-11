@@ -37,6 +37,9 @@
             width: 24px;
             height: auto;
         }
+        &.btn-cross {
+            display: none;
+        }
     }
     .user {
         display: flex;

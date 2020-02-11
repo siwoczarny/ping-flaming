@@ -5,7 +5,7 @@ const UserField = () => {
     return (
         <div className="user">
             <img src={userAvatar} alt="avatar"></img>
-            <input list="user-options" name="user-options" placeholder="emil.todd_87"></input>
+            <input list="user-options" name="user-options" placeholder="emil.todd_87" disabled></input>
             <datalist id="user-options">
                 <option value="">Log out</option>
             </datalist>

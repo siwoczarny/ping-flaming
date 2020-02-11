@@ -9,14 +9,57 @@ import TaskList from './layouts/TaskList';
 
 class App extends Component {
   state = {
-    tasks: [
+    tasks: [],
+    template: [
       {
         id: 0,
-        text: "Tytuł",
-        description: "Opis",
+        text: "Tytuł 1",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum.",
         list: "to-do",
         active: false,
-      }
+      },
+      {
+        id: 1,
+        text: "Tytuł 2",
+        description: "Lorem ipsum dolor sit amet, consectetur.",
+        list: "in-progress",
+        active: false,
+      },
+      {
+        id: 2,
+        text: "Tytuł 3",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum.",
+        list: "in-progress",
+        active: false,
+      },
+      {
+        id: 3,
+        text: "Tytuł 4",
+        description: "Lorem ipsum dolor sit amet, consectetur.",
+        list: "in-progress",
+        active: false,
+      },
+      {
+        id: 4,
+        text: "Tytuł 5",
+        description: "Lorem ipsum dolor sit amet, consectetur.",
+        list: "done",
+        active: false,
+      },
+      {
+        id: 5,
+        text: "Tytuł 6",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum.",
+        list: "done",
+        active: false,
+      },
+      {
+        id: 6,
+        text: "Tytuł 7",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum.",
+        list: "canceled",
+        active: false,
+      },
     ],
   }
 
@@ -62,9 +105,9 @@ class App extends Component {
     const tasks = [...this.state.tasks];
     tasks.forEach(task => {
       if(task.text === findText) {
-        task.active = true ;
-      } else {
-        alert('Nie znaleziono zadania o podanej nazwie')
+        task.active = !task.active ;
+      } else if (findText === null) {
+        task.active = false;        
       }
     })
     this.setState({
@@ -76,7 +119,7 @@ class App extends Component {
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div className="app">
-          <Header search={this.findTask}/>
+          <Header search={this.findTask} />
           <TaskList tasks={this.state.tasks} delete={this.deleteTask} edit={this.editTask}/>
           <ModalNewTask add={this.addTask}/>
         </div>
