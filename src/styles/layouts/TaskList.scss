@@ -3,12 +3,14 @@
 
 .list {
     @include tablet-large {
-        margin-top: 128px;
+        margin: 128px auto 0;
     }
-    margin-top: 180px;
+    margin-top: 200px;
+    max-width: 1200px;
     &_column {
         display: flex;
         flex-flow: column nowrap;
+        width: 100%;
         border-left: 1px dashed $color-bg-primary;
         &:nth-child(1) {
             border-left: none;
@@ -16,11 +18,9 @@
     }
     &_content {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
     }
     &_status {
-        width: 100%;
-        max-width: 400px;
         height: 56px;
         margin: 8px;
         padding: 16px;
