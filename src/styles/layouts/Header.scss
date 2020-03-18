@@ -51,24 +51,82 @@
     }
     .user {
         display: flex;
-        input {
+        flex-direction: row;
+        height: auto;
+        // .dropdown {
+        //         width: 256px;
+        //         height: 40px;
+        //         border: transparent;
+        //         border-radius: 8px;
+        //         font-size: 1rem;
+        //         font-weight: 500;
+        //         line-height: 1.5;
+        //         letter-spacing: 0.34px;
+        //         color: $color-text-main;
+        //         text-align: left;
+        //         background-color: $color-bg-primary;
+        //         padding-left: 8px;
+        //         outline: none;
+        //     }
+        
+        .show.dropdown{
+            border-top: 1px solid $color-element-focus;
+            border-right: 1px solid $color-element-focus;
+            
+            border-left: 1px solid $color-element-focus;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .dropdown {
+            display: flex;
             width: 256px;
             height: 40px;
-            border: transparent;
+            justify-content: space-between;
+            margin-left: 8px;
             border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 1.5;
-            letter-spacing: 0.34px;
-            color: $color-text-main;
+            transition: $transition;
             background-color: $color-bg-primary;
-            padding-left: 8px;
-            outline: none;
+            .show {
+                border-right: 1px solid $color-element-focus;
+                border-bottom: 1px solid $color-element-focus;
+                border-left: 1px solid $color-element-focus;
+            }
+            &-menu {
+                width: 100%;
+                height: 40px;
+                padding: 0;
+                margin: 0;
+                background-color: $color-bg-primary;
+                transform: translateY(96%) !important;
+                border: 1px solid $color-bg-primary;
+                border-radius: 0;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+            &-item {
+                padding: 8px;
+                color: $color-text-main;  
+            }
+            
+        }
+        .btn {
+                padding: 8px;
+                border: transparent;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 1.5;
+                letter-spacing: 0.34px;
+                color: $color-text-main;
+                border-radius: 8px;
+                background-color: $color-bg-primary;
+                &-primary-profile {
+                    width: 230px;
+                }
         }
         img {
-            width: 40px;
-            height: 40px;
-            margin-right: 8px;
-        }
+                width: 40px;
+                height: 40px;
+                margin: 0;
+            }
     }
 }
