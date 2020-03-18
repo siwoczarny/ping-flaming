@@ -3,11 +3,11 @@
 
 .list {
     @include tablet-large {
-        margin: 128px auto 0;
+        margin: 128px 32px;
     }
     margin-top: 200px;
-    max-width: 1200px;
-    &_column {
+    max-width: 1500px;
+   &_column {
         display: flex;
         flex-flow: column nowrap;
         width: 100%;
@@ -28,5 +28,8 @@
         text-align: center;
         border-radius: 8px;
         background-color: $color-bg-primary;
+    }
+    button {
+        top: 15px;
     }
 }
