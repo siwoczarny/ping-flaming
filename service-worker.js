@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ping-flaming/precache-manifest.57a2555da2caa8c91f4ffa2cd9b34252.js"
+  "/ping-flaming/precache-manifest.bd0b13749b4676335f7e73d89677da8a.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/ping-flaming/static/css/main.19cff147.chunk.css",
-    "main.js": "/ping-flaming/static/js/main.350ddc2d.chunk.js",
-    "main.js.map": "/ping-flaming/static/js/main.350ddc2d.chunk.js.map",
+    "main.css": "/ping-flaming/static/css/main.29ab1892.chunk.css",
+    "main.js": "/ping-flaming/static/js/main.3a966141.chunk.js",
+    "main.js.map": "/ping-flaming/static/js/main.3a966141.chunk.js.map",
     "runtime-main.js": "/ping-flaming/static/js/runtime-main.9c73e5c1.js",
     "runtime-main.js.map": "/ping-flaming/static/js/runtime-main.9c73e5c1.js.map",
-    "static/js/2.4125a7b9.chunk.js": "/ping-flaming/static/js/2.4125a7b9.chunk.js",
-    "static/js/2.4125a7b9.chunk.js.map": "/ping-flaming/static/js/2.4125a7b9.chunk.js.map",
+    "static/css/2.99b8a0d0.chunk.css": "/ping-flaming/static/css/2.99b8a0d0.chunk.css",
+    "static/js/2.ae742033.chunk.js": "/ping-flaming/static/js/2.ae742033.chunk.js",
+    "static/js/2.ae742033.chunk.js.map": "/ping-flaming/static/js/2.ae742033.chunk.js.map",
     "index.html": "/ping-flaming/index.html",
-    "precache-manifest.57a2555da2caa8c91f4ffa2cd9b34252.js": "/ping-flaming/precache-manifest.57a2555da2caa8c91f4ffa2cd9b34252.js",
+    "precache-manifest.bd0b13749b4676335f7e73d89677da8a.js": "/ping-flaming/precache-manifest.bd0b13749b4676335f7e73d89677da8a.js",
     "service-worker.js": "/ping-flaming/service-worker.js",
-    "static/css/main.19cff147.chunk.css.map": "/ping-flaming/static/css/main.19cff147.chunk.css.map",
-    "static/js/2.4125a7b9.chunk.js.LICENSE.txt": "/ping-flaming/static/js/2.4125a7b9.chunk.js.LICENSE.txt",
-    "static/media/img-logo.png": "/ping-flaming/static/media/img-logo.b6bab30c.png"
+    "static/css/2.99b8a0d0.chunk.css.map": "/ping-flaming/static/css/2.99b8a0d0.chunk.css.map",
+    "static/css/main.29ab1892.chunk.css.map": "/ping-flaming/static/css/main.29ab1892.chunk.css.map",
+    "static/js/2.ae742033.chunk.js.LICENSE.txt": "/ping-flaming/static/js/2.ae742033.chunk.js.LICENSE.txt",
+    "static/media/img-logo.png": "/ping-flaming/static/media/img-logo.b6bab30c.png",
+    "static/media/styles.css": "/ping-flaming/static/media/revicons.2feb69cc.eot"
   },
   "entrypoints": [
     "static/js/runtime-main.9c73e5c1.js",
-    "static/js/2.4125a7b9.chunk.js",
-    "static/css/main.19cff147.chunk.css",
-    "static/js/main.350ddc2d.chunk.js"
+    "static/css/2.99b8a0d0.chunk.css",
+    "static/js/2.ae742033.chunk.js",
+    "static/css/main.29ab1892.chunk.css",
+    "static/js/main.3a966141.chunk.js"
   ]
 }
