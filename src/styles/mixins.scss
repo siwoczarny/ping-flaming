@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+//media queries
+@mixin mobile-large {
+    @media (min-width: $breakpoint-mobile-large) {
+      @content;
+    }
+  }
+  
+  @mixin tablet-small {
+    @media (min-width: $breakpoint-tablet-small) {
+      @content;
+    }
+  }
+  
+  @mixin tablet-large {
+    @media (min-width: $breakpoint-tablet-large) {
+      @content;
+    }
+  }
+  
+  @mixin laptop {
+    @media (min-width: $breakpoint-laptop) {
+      @content;
+    }
+  }
+
+  @mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content
+    }
+  }

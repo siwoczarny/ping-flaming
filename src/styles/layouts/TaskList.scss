@@ -1,7 +1,11 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 .list {
-    margin-top: 128px;
+    @include tablet-large {
+        margin-top: 128px;
+    }
+    margin-top: 180px;
     &_column {
         display: flex;
         flex-flow: column nowrap;
