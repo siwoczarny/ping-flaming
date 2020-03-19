@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "054b2026f18e91ebca8450d0e3b6212a",
+    "revision": "ef4897d553b05d542c82e5f217196141",
     "url": "/ping-flaming/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ping-flaming/static/css/2.99b8a0d0.chunk.css"
   },
   {
-    "revision": "42a34c7c17fa3a34b461",
-    "url": "/ping-flaming/static/css/main.29ab1892.chunk.css"
+    "revision": "51548f3daf75bc25b2d2",
+    "url": "/ping-flaming/static/css/main.069aa50c.chunk.css"
   },
   {
     "revision": "1f8227f5b25c0a82d26f",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ping-flaming/static/js/2.ae742033.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "42a34c7c17fa3a34b461",
+    "revision": "51548f3daf75bc25b2d2",
     "url": "/ping-flaming/static/js/main.3a966141.chunk.js"
   },
   {

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ping-flaming/static/css/main.29ab1892.chunk.css",
+    "main.css": "/ping-flaming/static/css/main.069aa50c.chunk.css",
     "main.js": "/ping-flaming/static/js/main.3a966141.chunk.js",
     "main.js.map": "/ping-flaming/static/js/main.3a966141.chunk.js.map",
     "runtime-main.js": "/ping-flaming/static/js/runtime-main.9c73e5c1.js",
@@ -9,10 +9,10 @@
     "static/js/2.ae742033.chunk.js": "/ping-flaming/static/js/2.ae742033.chunk.js",
     "static/js/2.ae742033.chunk.js.map": "/ping-flaming/static/js/2.ae742033.chunk.js.map",
     "index.html": "/ping-flaming/index.html",
-    "precache-manifest.bd0b13749b4676335f7e73d89677da8a.js": "/ping-flaming/precache-manifest.bd0b13749b4676335f7e73d89677da8a.js",
+    "precache-manifest.4a0c86afe77b9ab51ec57ceebeaad602.js": "/ping-flaming/precache-manifest.4a0c86afe77b9ab51ec57ceebeaad602.js",
     "service-worker.js": "/ping-flaming/service-worker.js",
     "static/css/2.99b8a0d0.chunk.css.map": "/ping-flaming/static/css/2.99b8a0d0.chunk.css.map",
-    "static/css/main.29ab1892.chunk.css.map": "/ping-flaming/static/css/main.29ab1892.chunk.css.map",
+    "static/css/main.069aa50c.chunk.css.map": "/ping-flaming/static/css/main.069aa50c.chunk.css.map",
     "static/js/2.ae742033.chunk.js.LICENSE.txt": "/ping-flaming/static/js/2.ae742033.chunk.js.LICENSE.txt",
     "static/media/img-logo.png": "/ping-flaming/static/media/img-logo.b6bab30c.png",
     "static/media/styles.css": "/ping-flaming/static/media/revicons.2feb69cc.eot"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.9c73e5c1.js",
     "static/css/2.99b8a0d0.chunk.css",
     "static/js/2.ae742033.chunk.js",
-    "static/css/main.29ab1892.chunk.css",
+    "static/css/main.069aa50c.chunk.css",
     "static/js/main.3a966141.chunk.js"
   ]
 }
