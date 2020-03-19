@@ -2,7 +2,7 @@
 @import '../mixins.scss';
 
 .list {
-    @include tablet-large {
+    @include tablet-small {
         margin: 128px 32px;
     }
     margin-top: 200px;

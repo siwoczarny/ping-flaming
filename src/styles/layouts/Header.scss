@@ -3,7 +3,7 @@
 
 
 .header {
-    @include tablet-large {
+    @include tablet-small {
         flex-direction: row;
         justify-content: space-around;
     }

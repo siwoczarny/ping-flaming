@@ -1,5 +1,10 @@
 @import './variables.scss';
 
+body.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
 .app {
     display: flex;
     flex-flow: column nowrap;
